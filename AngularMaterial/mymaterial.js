@@ -4,6 +4,19 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'
     $scope.toggleSidenav = function (menuId) {
         $mdSidenav(menuId).toggle();
     };
+
+    $scope.itemsTwo = [201602,201604,201606,201608,201610,201702];
+    $scope.selectedItem;
+    $scope.getSelectedText = function () {
+        if ($scope.selectedItem !== undefined) {
+            return "You have selected: Item " + $scope.selectedItem;
+        } else {
+            return "Please select an item";
+        }
+    }
+
+
+
     $scope.menu = [
     {
         link: '',
